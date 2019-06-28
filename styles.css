@@ -1,0 +1,89 @@
+@import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 16px;
+  color: ghostwhite;
+  font-family: "Lato", sans-serif;
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+  color: ghostwhite;
+}
+
+.header-container {
+  background: rgba(0, 0, 0, 0.932);
+  height: 100vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* BURGER MENU STYLING */
+
+.nav-container {
+  cursor: pointer;
+}
+
+.nav-container div {
+  width: 25px;
+  height: 3px;
+  background-color: ghostwhite;
+  margin: 5px;
+  transition: all 1s ease;
+}
+
+.toggle .line1 {
+  transform: rotate(-45deg) translate(2px, 8px);
+}
+
+.toggle .line2 {
+  transform: rotate(45deg) translate(2px, -6px);
+}
+
+/* Scroll down arrow animation styling */
+
+.arrow {
+  font-size: 1.5rem;
+  animation: shake 2s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+  animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+  10%,
+  90% {
+    transform: translate3d(0, -1px, 0);
+  }
+
+  20%,
+  80% {
+    transform: translate3d(0, 2px, 0);
+  }
+
+  30%,
+  50%,
+  70% {
+    transform: translate3d(0, -4px, 0);
+  }
+
+  40%,
+  60% {
+    transform: translate3d(0, 4px, 0);
+  }
+}
+
+#box {
+  height: 100vh;
+  background: salmon;
+  /* display: none; */
+}
