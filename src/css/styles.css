@@ -49,7 +49,7 @@ ul {
 }
 
 .toggle .line1 {
-  transform: rotate(-45deg) translate(2px, 8px);
+  transform: rotate(-45deg) translate(0, 8px);
 }
 
 .toggle .line2 {
@@ -87,7 +87,22 @@ ul {
   width: 16px;
   left: 4px;
   bottom: 4px;
-  background-color: rgba(0, 0, 0, 0.932);
+  background-image: url(../images/Flag_of_France.svg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  transition: 0.4s;
+}
+
+.slider:after {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 4px;
+  bottom: 4px;
+  background-image: url(../images/800px-Flag_of_Europe.svg.png);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
   transition: 0.4s;
 }
 
@@ -100,7 +115,7 @@ input:checked + .slider:before {
 }
 
 h1 {
-  transition: all 2s ease-in;
+  transition: all 0.6s ease-in;
 }
 
 #nav-links {
