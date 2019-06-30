@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -56,75 +57,18 @@ ul {
   transform: rotate(45deg) translate(2px, -6px);
 }
 
-.switch {
-  position: relative;
-  display: inline-block;
-  width: 50px;
-  height: 24px;
+#languageText {
+  animation-name: rainbow;
+  animation-duration: 7s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
 }
 
-.switch input {
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
-
-.slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: ghostwhite;
-  transition: 0.4s;
-}
-
-.slider:before {
-  position: absolute;
-  content: "";
-  height: 16px;
-  width: 16px;
-  left: 4px;
-  bottom: 4px;
-  background-image: url(../images/Flag_of_France.svg);
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-  transition: 0.4s;
-}
-
-.slider:after {
-  position: absolute;
-  content: "";
-  height: 16px;
-  width: 16px;
-  left: 4px;
-  bottom: 4px;
-  background-image: url(../images/800px-Flag_of_Europe.svg.png);
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-  transition: 0.4s;
-}
-
-input:checked + .slider {
-  background-color: ghostwhite;
-}
-
-input:checked + .slider:before {
-  transform: translateX(26px);
-}
-
-h1 {
-  transition: all 0.6s ease-in;
-}
-
-#nav-links {
+.nav-links {
   background: rgba(0, 0, 0, 0.979);
   padding: 1rem;
-  position: absolute;
   height: 100vh;
   width: 100%;
-  opacity: 0;
   margin: auto;
   display: flex;
   flex-direction: column;
@@ -132,15 +76,21 @@ h1 {
   align-items: center;
   transition: all 0.6s ease;
   font-size: 2rem;
+  position: absolute;
+  opacity: 0;
 }
 
-#nav-links > li {
+.nav-links > li {
   padding: 1rem;
 }
 
-#nav-links > li > a:hover {
+.nav-links > li > a:hover {
   color: rgba(65, 65, 65, 0.938);
   transition: all 0.6s ease;
+}
+
+#switchLang {
+  cursor: pointer;
 }
 
 /* Scroll down arrow animation styling */
@@ -179,5 +129,42 @@ h1 {
 
 #box {
   height: 100vh;
-  background: salmon;
+  background: ghostwhite;
+  display: flex;
+  color: black;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  text-transform: uppercase;
+}
+
+.skill-box {
+  list-style-type: katakana;
+}
+
+.skill-box > li {
+  padding: 1rem;
+  font-weight: 900;
+  animation-name: rainbow;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes rainbow {
+  0% {
+    color: #845ec2;
+  }
+  25% {
+    color: #d65db1;
+  }
+  50% {
+    color: #ff6f91;
+  }
+  75% {
+    color: #ff9671;
+  }
+  100% {
+    color: #ffc75f;
+  }
 }
