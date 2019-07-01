@@ -7,10 +7,10 @@ const menu = document.querySelector(".nav-links");
 
 burger.addEventListener("click", () => {
   if (burger.classList.toggle("toggle")) {
-    menu.style.opacity = 1;
+    menu.setAttribute("style", "display: flex");
     switcher.style.opacity = 0;
   } else {
-    menu.style.opacity = 0;
+    menu.setAttribute("style", "display: none");
     switcher.style.opacity = 1;
   }
 });
@@ -19,12 +19,12 @@ burger.addEventListener("click", () => {
 switcher.addEventListener("click", () => {
   if (
     textChange.innerHTML ===
-    "Je suis John, <br> Développeur JavaScript, <br> Je construis des websites."
+    "Je suis John Wick, <br> Développeur JavaScript, <br> Je construis des websites."
   ) {
     textChange.innerHTML =
-      "I'm John, <br>Jr. JavaScript Developer, <br>I code for web and mobile devices.";
+      "I'm John Wick, <br>JavaScript Developer, <br>I code for web and mobile devices.";
   } else {
     textChange.innerHTML =
-      "Je suis John, <br> Développeur JavaScript, <br> Je construis des websites.";
+      "Je suis John Wick, <br> Développeur JavaScript, <br> Je construis des websites.";
   }
 });
